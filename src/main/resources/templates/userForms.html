@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Names</title>
+</head>
+<body>
+<h1>Form Names</h1>
+<ul>
+    <li th:each="formName : ${formNames}">
+        <a th:href="@{/viewUserForm(formName=${formName})}" th:text="${formName}"></a>
+    </li>
+</ul>
+</body>
+</html>

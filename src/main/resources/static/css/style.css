@@ -1,0 +1,467 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Toolbar styles */
+.toolbar {
+    background-color: #ffffff;
+    padding: 5px 10px; /* Reduced padding for a thinner toolbar */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.toolbar-button {
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px; /* Reduced padding for a smaller button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Slightly smaller font size */
+    margin: 0 5px; /* Reduced margin */
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.toolbar-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Form wrap styles */
+.form-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    transition: width 0.5s ease;
+}
+
+.cb-wrap {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+    display: block;
+}
+
+.cb-wrap.hide {
+    transform: translateX(calc(100% + 20px)); /* Move the panel completely off-screen */
+    opacity: 0; /* Fade out */
+}
+
+
+/* Content styles */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Adjust to account for the fixed navigation menu */
+}
+
+.container {
+    display: flex;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #f4f4f4;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+
+.logo_item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--blue-color);
+}
+
+.menu_content {
+  position: relative;
+}
+.menu_title {
+  margin: 15px 0;
+  padding: 0 20px;
+  font-size: 18px;
+}
+.sidebar.close .menu_title {
+  padding: 6px 30px;
+}
+.menu_title::before {
+  color: var(--grey-color);
+  white-space: nowrap;
+}
+.menu_dahsboard::before {
+  content: "Dashboard";
+}
+.menu_editor::before {
+  content: "Editor";
+}
+.menu_setting::before {
+  content: "Setting";
+}
+.sidebar.close .menu_title::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 18px;
+  border-radius: 12px;
+  background: var(--grey-color-light);
+}
+.menu_items {
+  padding: 0;
+  list-style: none;
+}
+.navlink_icon {
+  position: relative;
+  font-size: 22px;
+  min-width: 50px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.submenu_item {
+  cursor: pointer;
+}
+.submenu {
+  display: none;
+}
+.submenu_item .arrow-left {
+  position: absolute;
+  right: 10px;
+  display: inline-block;
+  margin-right: auto;
+}
+.sidebar.close .submenu {
+  display: none;
+}
+.show_submenu ~ .submenu {
+  display: block;
+}
+.show_submenu .arrow-left {
+  transform: rotate(90deg);
+}
+.submenu .sublink {
+  padding: 15px 15px 15px 52px;
+}
+.bottom_content {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  width: 260px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.bottom {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 0;
+  justify-content: space-around;
+  padding: 18px 0;
+  text-align: center;
+  width: 100%;
+  color: var(--grey-color);
+  border-top: 1px solid var(--grey-color-light);
+  background-color: var(--white-color);
+}
+.bottom i {
+  font-size: 20px;
+}
+.bottom span {
+  font-size: 18px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.applicationProcessBar
+{
+	  margin: auto;
+  width: 90%;
+  padding: 10px;
+}
+
+
+
+
+
+/* Clearfix to handle float issues */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+
+
+
+
+
+
+/* Base styles for larger screens */
+.applicationColumn {
+  float: left;
+  width: 60%;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 30px;
+  margin-left: 60px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+
+/* Clearfix to handle float issues */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1024px) {
+  .applicationColumn {
+    width: 70%;
+    margin: 20px auto;
+    float: none;
+  }
+
+  .column {
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .applicationColumn {
+    width: 100%;
+    margin: 10px auto;
+    float: none;
+  }
+
+  .column {
+    width: 100%;
+    margin: 10px auto;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .applicationColumn {
+    width: 100%;
+    margin: 5px auto;
+    float: none;
+  }
+
+  .column {
+    width: 100%;
+    margin: 5px auto;
+    float: none;
+  }
+}
+.checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+        .formbuilder-checkbox-inline {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            position: relative;
+            cursor: pointer;
+        }
+        .formbuilder-checkbox-inline:hover {
+            background-color: #fbe2d1;
+            border-color: #d9784e;
+        }
+        .formbuilder-checkbox-inline input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .formbuilder-checkbox-inline input[type="checkbox"] + label {
+            position: relative;
+            padding-left: 35px;
+            font-size: 16px;
+            color: #333;
+        }
+        .formbuilder-checkbox-inline input[type="checkbox"] + label::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 25px;
+            height: 25px;
+            border: 2px solid #ea9b5d;
+            border-radius: 4px;
+            background: #fff;
+        }
+        .formbuilder-checkbox-inline input[type="checkbox"]:checked + label::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 11px;
+            height: 11px;
+            background: #ea9b5d;
+        }
+
+        /* Mobile view adjustments */
+        @media (max-width: 768px) {
+            .formbuilder-checkbox-inline {
+                flex: 1 1 calc(50% - 20px); /* 2 items per row with gap */
+            }
+        }
+        @media (max-width: 480px) {
+            .formbuilder-checkbox-inline {
+                flex: 1 1 100%; /* 1 item per row */
+            }
+        }
+
+
+                        .formbuilder-radio-group {
+                            margin-bottom: 20px;
+                        }
+                        .formbuilder-radio-group-label {
+                            font-size: 16px;
+                            display: block;
+                            margin-bottom: 10px;
+                            color: #333;
+                        }
+                        .formbuilder-required {
+                            color: red;
+                        }
+                        .radio-group {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+                        .formbuilder-radio {
+                            position: relative;
+                            display: inline-block;
+                            cursor: pointer;
+                            user-select: none;
+                        }
+                        .formbuilder-radio input[type="radio"] {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+                        .formbuilder-radio label {
+                            position: relative;
+                            padding-left: 30px;
+                            font-size: 16px;
+                            color: #333;
+                        }
+                        .formbuilder-radio label::before {
+                            content: '';
+                            position: absolute;
+                            left: -0.5px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 18px;
+                            height: 18px;
+                            border: 2px solid #ea9b5d;
+                            border-radius: 50%;
+                            background: #fff;
+                        }
+                        .formbuilder-radio input[type="radio"]:checked + label::after {
+                            content: '';
+                            position: absolute;
+                            left: 5px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background: #ea9b5d;
+                        }
+
+        .formbuilder-file {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 400px;
+        }
+        .formbuilder-file-label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .formbuilder-file input[type="file"] {
+            display: none;
+        }
+        .formbuilder-file .custom-file-upload {
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #ea9b5d;
+            color: #fff;
+            border: 2px solid #ea9b5d;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s, border-color 0.3s;
+            text-align: center;
+        }
+        .formbuilder-file .custom-file-upload:hover {
+            background-color: #d9784e;
+            border-color: #d9784e;
+        }
