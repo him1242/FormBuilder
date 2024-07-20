@@ -33,7 +33,7 @@ const formattedDate = date.toLocaleString('en-US', {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            name: formattedDate+"_companyInformationForm",
+            name: formattedDate+"_JewelleryShowForm",
             formType: "CompanyInformation",
             formData: formData  // This is now a JSON object, not a string
           })
