@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <div>
-    <img src="./images/AdminHeader.png" style="width: 100%;"/>
+    <img src="./images/AdminHeaderReviewer.png" style="width: 100%;"/>
 </div>
 <head>
     <!-- You can Include your CSS here-->
@@ -106,7 +106,7 @@
             Live Version:
             <span th:text="${productionFormName}" style="color:red; margin-right: 10px;">Default Form Name</span>
 
-            <button id="deploy" class="toolbar-button" onclick="submitForApproval()">Submit for Review</button>
+            <button id="deploy" class="toolbar-button" onclick="deployFormAction()">Deploy</button>
             <select id="companyInfo" name="companyInfo" onchange="handleSelectChange(event)">
                 <option value="" selected>Select Form Version</option>
                 <option th:each="name : ${formList}" th:value="${name}" th:text="${name}"></option>

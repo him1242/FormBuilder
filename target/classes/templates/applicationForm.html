@@ -20,7 +20,10 @@
 
 
     <source srcset="./images/ApplicantCompanyInformation_mobile.png" media="(max-width: 800px)">
-    <source srcset="./images/ApplicantCompanyInformation.png">
+    <source th:if="${imageType == 'Exibitor'}" th:srcset="@{/images/ApplicantCompanyInformation.png}" type="image/png">
+    <source th:if="${imageType == 'Agent'}" th:srcset="@{/images/ApplicantCompanyInformationAgent.png}" type="image/png">
+    <source th:if="${imageType == 'TDCStaff'}" th:srcset="@{/images/ApplicantCompanyInformationTDCStaff.png}" type="image/png">
+
     <img src="./images/ApplicantCompanyInformation.png" style="width:100%"/>
 </picture>
 

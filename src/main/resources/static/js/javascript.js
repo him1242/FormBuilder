@@ -11,9 +11,13 @@ container = document.getElementById("build-wrap");
 var options = {
     controlPosition: 'right',
     showActionButtons: false,
+    roles: {
+        'Agent': 'agent',
+        'Exhibitor': 'Exhibitor'
+    },
     inputSets: [
         {
-            label: 'PromotionInformation',
+            label: 'T&C',
             fields: JSON.parse(`[
                         {
                             "type": "header",
@@ -182,7 +186,10 @@ $("#basic").next().slideDown();
           })
 
     }
-
+    function submitForApproval()
+    {
+            alert('Form:'+selectedFormVersion+" submit successfully");
+    }
     function deployFormAction()
     {
         var formData = JSON.parse(builder.actions.getData('json'));
