@@ -121,7 +121,10 @@ $("#basic").next().slideDown();
 
         alert(formRenderData);
   }
-
+    function submitForApproval()
+    {
+            alert('Form:'+selectedFormVersion+" submit successfully");
+    }
 
 
     // Function to toggle the panel visibility
@@ -186,10 +189,7 @@ $("#basic").next().slideDown();
           })
 
     }
-    function submitForApproval()
-    {
-            alert('Form:'+selectedFormVersion+" submit successfully");
-    }
+
     function deployFormAction()
     {
         var formData = JSON.parse(builder.actions.getData('json'));

@@ -106,7 +106,7 @@
             Live Version:
             <span th:text="${productionFormName}" style="color:red; margin-right: 10px;">Default Form Name</span>
 
-            <button id="deploy" class="toolbar-button" onclick="deployFormAction()">Deploy</button>
+            <button id="deploy" class="toolbar-button" onclick="submitForApproval()">Submit for Review</button>
             <select id="companyInfo" name="companyInfo" onchange="handleSelectChange(event)">
                 <option value="" selected>Select Form Version</option>
                 <option th:each="name : ${formList}" th:value="${name}" th:text="${name}"></option>
